@@ -452,6 +452,7 @@ h4 {
     display: block;
   }
   .menu {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
@@ -461,7 +462,7 @@ h4 {
     align-items: stretch;
     gap: 0;
     padding: 0.5rem 1.25rem 1.5rem;
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 65px);
     overflow: auto;
     opacity: 0;
     visibility: hidden;
@@ -470,6 +471,7 @@ h4 {
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
   }
   .menu.open {
+    display: block;
     opacity: 1;
     visibility: visible;
     transform: none;
@@ -1973,3 +1975,479 @@ footer a:hover {
     animation: none;
   }
 }
+
+
+
+/* Career pages */
+/* Career pages */
+
+
+/* =====================================
+   STRONG PILLAR - CAREERS SECTION
+===================================== */
+
+.sp-careers {
+    --sp-primary: #2d6a4f;
+    --sp-primary-light: #40916c;
+    --sp-primary-soft: #52b788;
+    --sp-gold: #f4d35e;
+    --sp-pink: #f7a8c4;
+
+    position: relative;
+    overflow: hidden;
+    padding: 30px 5%;
+    background: #f8faf8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sp-careers,
+.sp-careers * {
+    box-sizing: border-box;
+}
+
+.sp-careers::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -230px;
+    right: -150px;
+    background: radial-gradient(
+        circle,
+        rgba(82, 183, 136, .14),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.sp-careers::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    left: -150px;
+    background: radial-gradient(
+        circle,
+        rgba(244, 211, 94, .13),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.sp-careers-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    align-items: center;
+    gap: 75px;
+}
+
+
+.sp-careers-content h2 {
+    color: #172c23;
+    font-size: clamp(36px, 4.2vw, 57px);
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -1.8px;
+    margin: 0 0 25px;
+}
+
+
+.sp-careers-description {
+    max-width: 520px;
+    color: #69776f;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.sp-careers-divider {
+    width: 65px;
+    height: 4px;
+    border-radius: 10px;
+    background: var(--sp-gold);
+    margin-bottom: 28px;
+}
+
+.sp-careers-content h3 {
+    color: #1e3027;
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.sp-careers-text {
+    color: #718078;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+/* BENEFITS */
+
+.sp-career-benefits {
+    display: grid;
+    gap: 20px;
+}
+
+.sp-benefit {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.sp-benefit-icon {
+    flex-shrink: 0;
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #f4f1e6, #e8e3d1);
+    color: var(--gold3);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sp-benefit h4 {
+    color: #263b30;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.sp-benefit p {
+    color: #89948d;
+    font-size: 12px;
+    margin: 0;
+}
+
+.sp-careers-location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sp-location-dot {
+    width: 9px;
+    height: 9px;
+    background: var(--gold3);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(82, 183, 136, .13);
+}
+
+/* FORM CARD */
+
+.sp-careers-form-wrapper {
+    background: #ffffff;
+    padding: 42px;
+    border: 1px solid #edf1ed;
+    border-radius: 22px;
+    box-shadow: 0 25px 70px rgba(30, 65, 45, .09);
+}
+
+.sp-form-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #edf1ed;
+    margin-bottom: 28px;
+}
+
+.sp-form-label {
+    color: var(--gold3);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sp-form-top h3 {
+    color: #1d3227;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 8px 0 5px;
+}
+
+.sp-form-top p {
+    color: #87938b;
+    font-size: 13px;
+    margin: 0;
+}
+
+.sp-form-number {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--gold2);
+}
+
+/* FORM GRID */
+
+.sp-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px 17px;
+}
+
+.sp-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.sp-field-full {
+    grid-column: 1 / -1;
+}
+
+.sp-field label {
+    color: #34483b;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.sp-field label span {
+    color: #d9534f;
+}
+
+.sp-field input,
+.sp-field select {
+    width: 100%;
+    height: 49px;
+    padding: 0 14px;
+    background: #fafcfb;
+    border: 1px solid #e4ebe5;
+    border-radius: 8px;
+    outline: none;
+    color: var(--gold3);
+    font-family: inherit;
+    font-size: 12px;
+    transition: .25s ease;
+}
+
+.sp-field input::placeholder {
+    color: #a7b1aa;
+}
+
+.sp-field input:focus,
+.sp-field select:focus {
+    border-color: var(--gold2);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(64, 145, 108, .10);
+}
+
+/* FILE UPLOAD */
+
+.sp-upload-box {
+    margin-top: 25px;
+}
+
+.sp-upload-box > label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px;
+    border: 1px dashed #b6cdbd;
+    border-radius: 10px;
+    background: #fff20210;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.sp-upload-box > label:hover {
+    border-color: var(--gold);
+    background: white;
+}
+
+.sp-upload-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 10px;
+    background: var(--gold2);
+    color: var(--gold);
+    font-size: 23px;
+}
+
+.sp-upload-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sp-upload-content strong {
+    color: var(--gold3);
+    font-size: 12px;
+}
+
+.sp-upload-content small {
+    color: #97a39b;
+    font-size: 10px;
+}
+
+.sp-upload-action {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sp-upload-box input {
+    display: none;
+}
+
+.sp-file-name {
+    color: #849188;
+    font-size: 11px;
+    margin: 9px 3px 0;
+    overflow-wrap: anywhere;
+}
+
+/* SUBMIT BUTTON */
+
+.sp-submit-btn {
+    width: 100%;
+    height: 54px;
+    margin-top: 28px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 9px;
+    background: var(--grad);
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+
+}
+
+.sp-submit-btn:hover {
+    /* background: #204e39; */
+    transform: translateY(-2px);
+    box-shadow: 0 9px 20px rgba(45, 106, 79, .20);
+}
+
+.sp-submit-arrow {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, .15);
+    font-size: 19px;
+}
+
+.sp-form-note {
+    color: #9aa49d;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    margin: 17px 0 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .sp-careers {
+        padding: 30px 3%;
+    }
+
+    .sp-careers-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        max-width: 800px;
+    }
+
+    .sp-careers-content h2 {
+        font-size: 46px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .sp-careers {
+        padding: 60px 18px;
+    }
+
+    .sp-careers-container {
+        gap: 35px;
+    }
+
+    .sp-careers-content h2 {
+        font-size: 35px;
+        letter-spacing: -1px;
+    }
+
+    .sp-careers-content h3 {
+        font-size: 20px;
+    }
+
+    .sp-careers-description,
+    .sp-careers-text {
+        font-size: 13px;
+    }
+
+    .sp-careers-form-wrapper {
+        padding: 25px 18px;
+        border-radius: 16px;
+    }
+
+    .sp-form-top h3 {
+        font-size: 26px;
+    }
+
+    .sp-form-grid {
+        grid-template-columns: 1fr;
+        gap: 19px;
+    }
+
+    .sp-field-full {
+        grid-column: auto;
+    }
+
+    .sp-benefit {
+        gap: 13px;
+    }
+
+    .sp-benefit-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .sp-upload-box > label {
+        gap: 10px;
+        padding: 13px 10px;
+    }
+
+    .sp-upload-action {
+        font-size: 11px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sp-careers *,
+    .sp-careers *::before,
+    .sp-careers *::after {
+        transition: none !important;
+    }
+}
+
+/* Career pages */
+/* Career pages */
